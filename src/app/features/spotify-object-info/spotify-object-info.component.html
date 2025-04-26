@@ -1,7 +1,11 @@
 @if (data) {
 <div class="spotify-info">
-  @if (data.album.images.length) {
+  @if (data.album && data.album.images && data.album.images.length) {
+  <!-- For tracks -->
   <img [src]="data.album.images[0].url" [alt]="data.name" width="200" />
+  } @if (data.images && data.images.length) {
+  <!-- For albums and playlists -->
+  <img [src]="data.images[0].url" [alt]="data.name" width="200" />
   }
   <h2>{{ data.name }}</h2>
   <p>
