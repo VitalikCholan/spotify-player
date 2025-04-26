@@ -1,0 +1,27 @@
+<form [formGroup]="urlForm" (ngSubmit)="onSubmit()">
+  <input
+    formControlName="spotifyUrl"
+    placeholder="Paste Spotify track, album, or playlist URL"
+  />
+  @if (urlForm.get('spotifyUrl')?.invalid && urlForm.get('spotifyUrl')?.touched)
+  {
+  <div>
+    @if (urlForm.get('spotifyUrl')?.errors?.['invalidSpotifyUrl']) {
+    <span>
+      Invalid Spotify link. Please enter a track, album, or playlist URL.
+    </span>
+    } @if (urlForm.get('spotifyUrl')?.errors?.['required']) {
+    <span> URL is required. </span>
+    }
+  </div>
+  }
+  <button type="submit" [disabled]="urlForm.invalid">Submit</button>
+</form>
+
+@if (spotifyData$) {
+<div>
+  <pre>{{ spotifyData$ | async | json }}</pre>
+</div>
+} @if (error) {
+<div style="color: red">{{ error }}</div>
+}

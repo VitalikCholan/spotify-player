@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth/services/auth.service';
 import { Router } from '@angular/router';
+import { UrlInputComponent } from '../url-validation/url-input/url-input.component';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [UrlInputComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
