@@ -14,7 +14,6 @@ import { SpotifyApiService } from '../../spotify-api/spotify-api.service';
 import { SpotifyTrack } from '../../../shared/models/spotify-track';
 import { SpotifyObjectType } from '../../../shared/models/spotify-object-type';
 import { SpotifyObjectInfoComponent } from '../../spotify-object-info/spotify-object-info.component';
-
 @Component({
   selector: 'app-url-input',
   standalone: true,
