@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
 import { tap } from 'rxjs/operators';
-import { environment } from '../../environments/environment';
-import { TokenResponse } from '../models/token-response';
+import { environment } from '../../../../environments/environment';
+import { TokenResponse } from '../../../shared/models/token-response';
 
 @Injectable({
   providedIn: 'root',
