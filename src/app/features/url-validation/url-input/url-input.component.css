@@ -1,7 +1,38 @@
-input.ng-invalid.ng-touched {
-  border: 1px solid red;
+form {
+  background: #f8f9fa;
+  padding: 2em 1.5em;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  min-width: 600px;
+  margin: 2em auto 1em auto;
+}
+input {
+  width: 90%;
+  padding: 0.7em 1em;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+  font-size: 1em;
+  transition: border 0.2s;
+}
+input:focus {
+  border: 1.5px solid #1db954;
+  outline: none;
+}
+button[type="submit"] {
+  background: #1db954;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button[type="submit"]:hover:not(:disabled) {
+  background: #159c43;
 }
 span {
-  color: red;
-  font-size: 0.9em;
+  color: #e74c3c;
+  font-size: 0.95em;
 }
