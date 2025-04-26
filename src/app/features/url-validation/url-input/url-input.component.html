@@ -19,9 +19,9 @@
 </form>
 
 @if (spotifyData$) {
-<div>
-  <pre>{{ spotifyData$ | async | json }}</pre>
-</div>
+<app-spotify-object-info
+  [data]="spotifyData$ | async"
+></app-spotify-object-info>
 } @if (error) {
 <div style="color: red">{{ error }}</div>
 }

@@ -13,11 +13,12 @@ import { catchError } from 'rxjs/operators';
 import { SpotifyApiService } from '../../spotify-api/spotify-api.service';
 import { SpotifyTrack } from '../../../shared/models/spotify-track';
 import { SpotifyObjectType } from '../../../shared/models/spotify-object-type';
+import { SpotifyObjectInfoComponent } from '../../spotify-object-info/spotify-object-info.component';
 
 @Component({
   selector: 'app-url-input',
   standalone: true,
-  imports: [ReactiveFormsModule, JsonPipe, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, SpotifyObjectInfoComponent],
   templateUrl: './url-input.component.html',
   styleUrl: './url-input.component.css',
 })

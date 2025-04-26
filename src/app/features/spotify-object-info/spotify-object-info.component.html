@@ -1,0 +1,12 @@
+@if (data) {
+<div class="spotify-info">
+  @if (data.album.images.length) {
+  <img [src]="data.album.images[0].url" [alt]="data.name" width="200" />
+  }
+  <h2>{{ data.name }}</h2>
+  <p>
+    Artist(s): @for (artist of data.artists; track artist; let last = $last) {
+    {{ artist.name }}@if (!last) {<span>, </span>} }
+  </p>
+</div>
+}
