@@ -16,6 +16,11 @@
   } @if (isPlaylist(data)) {
   <p>By: {{ data.owner.display_name }}</p>
   <p>Total tracks: {{ data.tracks.total }}</p>
+  } @if (isTrack(data) && data.preview_url) {
+  <app-player [url]="data.preview_url"></app-player>
+  } @else if (isTrack(data) && !data.preview_url) {
+  <p>No preview available for this track.</p>
   }
 </div>
+<pre>{{ data | json }}</pre>
 }

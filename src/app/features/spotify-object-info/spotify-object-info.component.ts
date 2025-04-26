@@ -3,13 +3,14 @@ import { SpotifyAlbum } from '../../shared/models/spotify-album';
 import { SpotifyPlaylist } from '../../shared/models/spotify-playlist';
 import { Input } from '@angular/core';
 import { Component } from '@angular/core';
-
+import { PlayerComponent } from '../player/player.component';
+import { CommonModule } from '@angular/common';
 export type SpotifyData = SpotifyTrack | SpotifyAlbum | SpotifyPlaylist;
 
 @Component({
   selector: 'app-spotify-object-info',
   standalone: true,
-  imports: [],
+  imports: [PlayerComponent, CommonModule],
   templateUrl: './spotify-object-info.component.html',
   styleUrl: './spotify-object-info.component.css',
 })

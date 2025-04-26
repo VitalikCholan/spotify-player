@@ -1,0 +1,8 @@
+@if (url) {
+<div class="player-controls">
+  <button (click)="play()" [disabled]="isPlaying">Play</button>
+  <button (click)="pause()" [disabled]="!isPlaying">Pause</button>
+</div>
+} @if (!url) {
+<p>No preview available for this track.</p>
+}

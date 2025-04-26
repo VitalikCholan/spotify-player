@@ -7,5 +7,5 @@ export interface SpotifyTrack {
   id: string;
   name: string;
   preview_url: string | null;
-  images: { url: string; width: number; height: number }[];
+  // images: { url: string; width: number; height: number }[];
 }
